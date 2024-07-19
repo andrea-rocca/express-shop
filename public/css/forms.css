@@ -9,12 +9,20 @@
     margin-bottom: 0.25rem;
 }
 
-.form-control input {
+.form-control input, textarea {
     border: 1px solid #a1a1a1;
     font: inherit;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
-.form-control input:focus {
+.form-control input:focus, textarea:focus {
     outline-color: #00695c;
+}
+
+textarea, input {
+    padding: .5rem;
+}
+
+textarea {
+    width: 100%;
 }
