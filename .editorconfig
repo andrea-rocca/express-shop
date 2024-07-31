@@ -1,0 +1,24 @@
+root = true
+[*.openapi.json]
+
+[*]
+charset = utf-8
+indent_style = tab
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.ts]
+quote_type = single
+
+[*.scss]
+indent_style = tab
+indent_size = 4
+
+[*.js]
+indent_style = tab
+indent_size = 4
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
