@@ -5,6 +5,34 @@
 <body>
 <%- include('../includes/nav.ejs') %>
     <main>
-        <h1>Cart is empty.</h1>
+		<% if (products) { %>
+			<h1>Cart</h1>
+			<hr>
+			<ul>
+				<% for (let prod of products) { %>
+					<li>
+						<p>
+							<%= prod.productData.title %> [<%= prod.qty %>]
+						</p>
+						<form
+							action="/cart-delete-item"
+							method="POST">
+							<input
+								name="productId"
+								type="hidden"
+								value="<%= prod.productData.id %>"
+								/>
+							<button
+								class="btn"
+								type="submit">
+								Delete
+							</button>
+						</form>
+					</li>
+				<% } %>
+			</ul>
+		<% } else { %>
+			<h1>Cart is empty</h1>
+		<% } %>
 
 <%- include('../includes/end.ejs') %>
